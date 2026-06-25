@@ -1,0 +1,43 @@
+-- Procedure to Display Employee Details
+
+CREATE OR REPLACE PROCEDURE emp_details(
+    p_empid IN NUMBER
+)
+AS
+    v_name   VARCHAR2(50);
+    v_salary NUMBER;
+BEGIN
+    SELECT emp_name, salary
+    INTO v_name, v_salary
+    FROM employee
+    WHERE emp_id = p_empid;
+
+    DBMS_OUTPUT.PUT_LINE('Employee Name: ' || v_name);
+    DBMS_OUTPUT.PUT_LINE('Salary: ' || v_salary);
+END;
+/
+
+-- Execute Procedure
+
+BEGIN
+    emp_details(101);
+END;
+/
+
+-- Procedure to Calculate Square of a Number
+
+CREATE OR REPLACE PROCEDURE square_num(
+    n IN NUMBER
+)
+AS
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Square = ' || (n * n));
+END;
+/
+
+-- Execute Procedure
+
+BEGIN
+    square_num(5);
+END;
+/

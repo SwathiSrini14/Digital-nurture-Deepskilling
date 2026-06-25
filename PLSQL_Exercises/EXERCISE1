@@ -1,0 +1,42 @@
+-- Program 1: Check Even or Odd
+
+DECLARE
+    num NUMBER := 10;
+BEGIN
+    IF MOD(num, 2) = 0 THEN
+        DBMS_OUTPUT.PUT_LINE(num || ' is Even');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE(num || ' is Odd');
+    END IF;
+END;
+/
+
+-- Program 2: Largest of Three Numbers
+
+DECLARE
+    a NUMBER := 20;
+    b NUMBER := 15;
+    c NUMBER := 30;
+BEGIN
+    IF a > b AND a > c THEN
+        DBMS_OUTPUT.PUT_LINE('Largest Number: ' || a);
+    ELSIF b > c THEN
+        DBMS_OUTPUT.PUT_LINE('Largest Number: ' || b);
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Largest Number: ' || c);
+    END IF;
+END;
+/
+
+-- Program 3: Print Numbers 1 to 10
+
+DECLARE
+    i NUMBER := 1;
+BEGIN
+    LOOP
+        DBMS_OUTPUT.PUT_LINE(i);
+        i := i + 1;
+        EXIT WHEN i > 10;
+    END LOOP;
+END;
+/
