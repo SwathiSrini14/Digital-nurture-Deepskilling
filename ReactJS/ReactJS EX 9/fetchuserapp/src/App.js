@@ -1,0 +1,20 @@
+import './App.css';
+import Getuser from './components/Getuser';
+
+function App() {
+
+    return (
+
+        <div className="App">
+
+            <h1>Fetch User App</h1>
+
+            <Getuser />
+
+        </div>
+
+    );
+
+}
+
+export default App;
