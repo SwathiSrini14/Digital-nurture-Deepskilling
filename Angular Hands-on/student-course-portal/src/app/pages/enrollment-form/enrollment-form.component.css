@@ -1,0 +1,4 @@
+/* Hands-On 4, Task 2, Step 45 */
+.ng-invalid.ng-touched { border-color: red; }
+.ng-valid.ng-touched { border-color: green; }
+form div { margin-bottom: 10px; }
